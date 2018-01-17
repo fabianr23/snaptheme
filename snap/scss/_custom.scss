@@ -1,3 +1,37 @@
 /**setting:logo**/
 
 /**setting:customcss**/
+
+#container-actions-left {
+    position: absolute;
+    z-index: 9;
+    height: 100%;
+    margin: -2% -10px;
+    overflow: hidden;
+}
+#container-sections-updates {
+    float: left;
+    width: 0px;
+    overflow: hidden;
+    height: 100%;
+    background: #fff;
+}
+#button-toggle-menu-open {
+    background: #05669e;
+    float: left;
+    width: 10%;
+    min-width: 23px;
+    height: 100%;
+    color: #fff;
+    margin-left: 0px;
+}
+#button-toggle-menu-close{
+    display:none;
+    background: #05669e;
+    float: left;
+    width: 10%;
+    min-width: 23px;
+    height: 100%;
+    color: #fff;
+    margin-left: 0px;
+}

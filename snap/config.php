@@ -195,7 +195,8 @@ $THEME->layouts = array(
 );
 
 $THEME->javascripts = array();
-$THEME->javascripts_footer = array();
+//$THEME->javascripts_footer = array();
+$THEME->javascripts_footer = array( 'custom-functions' );
 
 $THEME->hidefromselector = false;
 
