@@ -20,7 +20,7 @@
     background: #05669e;
     float: left;
     width: 10%;
-    min-width: 23px;
+    min-width: 30px;
     height: 100%;
     color: #fff;
     margin-left: 0px;
@@ -34,4 +34,96 @@
     height: 100%;
     color: #fff;
     margin-left: 0px;
+}
+/* Ajustes visuales de vista de cursos */
+#snap-pm-header{
+    padding: 0px !important;
+    background: #fff !important;
+    -webkit-box-shadow: 0 2px 10px #cacaca;
+    box-shadow: 0 2px 10px #cacaca;
+}
+.snap-pm-user {
+    float: left;
+    width: 90%;
+    padding: 2% 2% 0 2%;
+}
+#snap-pm-header .container-user-header a {
+    color: #63B2DF !important;
+}
+#snap-pm-content #snap-pm-courses {
+    overflow: hidden;
+    margin-left: 15px;
+}
+.ido-logo {
+    width: 10%;
+    float: left;
+    padding: 2%;
+    background: #00b4e2;
+}
+#button-toggle-menu-open img {
+    width: 100%;
+    max-width: 23px;
+    margin: 9px 4px;
+    background: #fff;
+    border-radius: 50%;
+}
+#button-toggle-menu-close img {
+    width: 100%;
+    max-width: 20px;
+    margin: 9px 3px;
+    background: #fff;
+    border-radius: 50%;
+}
+#course-category-listings{
+    margin-left: -16px;
+}
+/* ajustes vista de curso específico */
+#container-full-course {
+    width: 100%;
+    padding-left: 10%;
+}
+#left-column-course {
+    width: 10%;
+    position: absolute;
+    height: 100%;
+    float: left;
+    background: #00b4e2;
+    z-index: 24;
+}
+.ido-logo-course {
+    width: 100%;
+    padding: 2%;
+    background: #00b4e2;
+}
+#unit-content-left {
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    float:left;
+    padding: 0 2%;
+    background: #00b4e2;
+    color: #fff;
+}
+#unit-content-left a{
+    color: #fff;
+}
+#unit-content-full {
+    width: 100%;
+    float: left;
+}
+#snap-course-wrapper {
+    margin: 0 !important;
+}
+#button-toggle-coursecontent-close {
+    background: #fff;
+    border-radius: 50%;
+    width: 50%;
+    margin: 30px auto;
+    display: none;
+}
+#button-toggle-coursecontent-open {
+    background: #fff;
+    border-radius: 50%;
+    width: 50%;
+    margin: 30px auto;
 }

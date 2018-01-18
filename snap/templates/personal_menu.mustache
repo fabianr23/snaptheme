@@ -35,14 +35,16 @@
             </div>
             <!-- User details -->
             <div class="snap-pm-user">
-                {{{userpicture}}}
-                {{{fullnamelink}}}
-                {{{realfullnamelink}}}
-                <div id="snap-pm-header-quicklinks">
-                    <div id="button-logout">
-                        {{#quicklinks}}
-                            <a {{#id}}id="{{.}}" {{/id}}href="{{link}}">{{title}}</a>
-                        {{/quicklinks}}
+                <div class= "container-user-header"> 
+                    {{{userpicture}}}
+                    {{{fullnamelink}}}
+                    {{{realfullnamelink}}}
+                    <div id="snap-pm-header-quicklinks">
+                        <div id="button-logout">
+                            {{#quicklinks}}
+                                <a {{#id}}id="{{.}}" {{/id}}href="{{link}}">{{title}}</a>
+                            {{/quicklinks}}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -65,10 +67,10 @@
                     </div>
                 </div>
                 <div id="button-toggle-menu-open">
-                 >
+                    <img src="/theme/snap/images/show-menu-icon.png" alt="show menu"/>
                 </div>
                 <div id="button-toggle-menu-close">
-                 <
+                    <img src="/theme/snap/images/close-menu-icon1.png" alt="close menu"/>
                 </div>
             </div>
             <!-- Courses -->

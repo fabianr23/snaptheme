@@ -49,62 +49,79 @@ if ($COURSE->id != SITEID && !empty($coverimagecss)) {
 ////////////////////////// MAIN  ///////////////////////////////
 -->
 <main id="moodle-page" class="clearfix">
-<div id="page-header" class="clearfix <?php echo $mastimage; ?>">
-    <div class="breadcrumb-nav" aria-label="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
-
-    <div id="page-mast">
-    <?php
-    if ($coursemainpage) {
-        $output = $PAGE->get_renderer('core', 'course');
-        echo $output->course_format_warning();
-    }
-    echo $OUTPUT->page_heading();
-    echo $OUTPUT->course_header();
-    // Note, there is no blacklisting for the edit blocks button on course pages.
-    echo $OUTPUT->page_heading_button();
-    if ($tocformat && !$leftnav) {
-        echo $OUTPUT->course_toc();
-    }
-    ?>
+<div id="left-column-course">
+    <div class="ido-logo-course">
+        <img src="/theme/image.php/snap/core/1513708876/u/f1" alt="IDOLearning"/>
+    </div>
+    <div id="button-toggle-coursecontent-open">
+        <img src="/theme/snap/images/show-menu-icon.png" alt="show menu"/>
+    </div>
+    <div id="button-toggle-coursecontent-close">
+        <img src="/theme/snap/images/close-menu-icon1.png" alt="close menu"/>
     </div>
 </div>
-<?php
-if ($tocformat && $leftnav) {
-    echo '<div id="snap-course-wrapper">';
-    echo '<div class="row">';
-    echo '<div class="col-lg-3">';
-    echo $OUTPUT->course_toc();
-    echo '</div>';
-    echo '<div class="col-lg-9">';
-}
-?>
-<section id="region-main">
+<div id="container-full-course">
+    <div id="page-header" class="clearfix <?php echo $mastimage; ?>">
+        <div class="breadcrumb-nav" aria-label="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
 
-<?php
-echo $OUTPUT->course_content_header();
-$output = $PAGE->get_renderer('core', 'course');
-echo $output->snap_footer_alert();
-echo $OUTPUT->course_modchooser();
-echo $OUTPUT->main_content();
-echo $OUTPUT->course_content_footer();
-?>
-</section>
-<?php
-require(__DIR__.'/moodle-blocks.php');
-
-if ($tocformat && $leftnav) {
-    echo '</div> <!-- close section -->';
-    echo '</div> <!-- close row -->';
-    echo '</div> <!-- close course wrapper -->';
-}
-
-if ($coursemainpage) {
-    $coursefooter = $output->course_footer();
-    if (!empty($coursefooter)) { ?>
-        <footer role="contentinfo" id="snap-course-footer"><?php echo $coursefooter ?></footer>
+        <div id="page-mast">
+        <?php
+        if ($coursemainpage) {
+            $output = $PAGE->get_renderer('core', 'course');
+            echo $output->course_format_warning();
+        }
+        echo $OUTPUT->page_heading();
+        echo $OUTPUT->course_header();
+        // Note, there is no blacklisting for the edit blocks button on course pages.
+        echo $OUTPUT->page_heading_button();
+        if ($tocformat && !$leftnav) {
+            echo $OUTPUT->course_toc();
+        }
+        ?>
+        </div>
+    </div>
     <?php
+    if ($tocformat && $leftnav) {
+        echo '<div id="snap-course-wrapper">';
+        echo '<div class="row">';
+        echo '<div id="unit-content-left">';
+        echo '<div class="col-lg-12">';
+        echo $OUTPUT->course_toc();
+        echo '</div>';
+        echo '</div>';
+        echo '<div id="unit-content-full">';
+        echo '<div class="col-lg-12">';
+        echo '</div>';
     }
-} ?>
+    ?>
+    <section id="region-main">
+
+    <?php
+    echo $OUTPUT->course_content_header();
+    $output = $PAGE->get_renderer('core', 'course');
+    echo $output->snap_footer_alert();
+    echo $OUTPUT->course_modchooser();
+    echo $OUTPUT->main_content();
+    echo $OUTPUT->course_content_footer();
+    ?>
+    </section>
+    <?php
+    require(__DIR__.'/moodle-blocks.php');
+
+    if ($tocformat && $leftnav) {
+        echo '</div> <!-- close section -->';
+        echo '</div> <!-- close row -->';
+        echo '</div> <!-- close course wrapper -->';
+    }
+
+    if ($coursemainpage) {
+        $coursefooter = $output->course_footer();
+        if (!empty($coursefooter)) { ?>
+            <footer role="contentinfo" id="snap-course-footer"><?php echo $coursefooter ?></footer>
+        <?php
+        }
+    } ?>
+</div>
 </main>
 
 </div>
